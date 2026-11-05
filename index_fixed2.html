@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#172638">
+<title>現實之上，理想之下｜人生岔路</title>
+<meta name="story-version" content="2026-11-05-fix2">
+<style>
+:root{
+  --ink:#202b3b;--muted:#667386;--paper:#f5efdf;--card:#fffdf8;
+  --navy:#172638;--gold:#c9953e;--gold2:#e5bd70;--line:#e5d8bf;
+  --soft:#f2e8d5;--shadow:0 18px 50px rgba(35,42,52,.09);
+  font-family: ui-serif, "Noto Serif TC", "PingFang TC", "Microsoft JhengHei", serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);line-height:1.8}
+button{font:inherit}
+.topbar{background:var(--navy);color:#fff;padding:16px max(22px,calc((100% - 1080px)/2));display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{font-size:1rem;letter-spacing:.12em}
+.topbar small{color:#c8d0d9;letter-spacing:.08em}
+main{max-width:1080px;margin:0 auto;padding:42px 22px 76px}
+.hero{position:relative;overflow:hidden;background:linear-gradient(135deg,#172638 0%,#263d50 68%,#435563 100%);color:#fff;border-radius:24px;padding:clamp(30px,6vw,68px);box-shadow:var(--shadow)}
+.hero:after{content:"";position:absolute;width:310px;height:310px;border:1px solid rgba(229,189,112,.35);border-radius:50%;right:-95px;top:-125px;box-shadow:0 0 0 35px rgba(229,189,112,.04),0 0 0 75px rgba(229,189,112,.035)}
+.eyebrow{color:var(--gold2);letter-spacing:.22em;font-size:.8rem}
+h1{font-size:clamp(2.15rem,6vw,4.2rem);line-height:1.25;letter-spacing:.06em;margin:18px 0}
+.subtitle{color:#d9e0e6;max-width:650px;font-size:1.05rem}
+.hero-quote{margin:30px 0 0;padding-left:18px;border-left:2px solid var(--gold2);color:#f1e7d3}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:clamp(22px,4vw,42px);margin-top:24px;box-shadow:var(--shadow)}
+.kicker{font-size:.78rem;color:#a66e19;letter-spacing:.16em;font-weight:700}
+h2{font-size:clamp(1.4rem,3vw,2rem);line-height:1.4;margin:8px 0 16px}
+p{margin:0 0 14px}
+.lead{font-size:1.08rem;color:#3e4b5c}
+.note{border-left:3px solid var(--gold);padding:12px 16px;background:#faf4e8;color:#596474;margin:20px 0}
+.choices{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:24px}
+.choice{display:block;text-align:left;background:#fff;border:1.5px solid var(--line);border-radius:16px;padding:22px;color:var(--ink);cursor:pointer;transition:transform .18s,border-color .18s,box-shadow .18s}
+.choice:hover,.choice:focus-visible{border-color:var(--gold);transform:translateY(-2px);box-shadow:0 10px 24px rgba(35,42,52,.08);outline:none}
+.choice:focus-visible,.primary:focus-visible,.secondary:focus-visible{outline:3px solid #7bb9d2;outline-offset:3px}
+.choice-label{display:inline-block;color:#a66e19;font-weight:700;letter-spacing:.12em;margin-bottom:8px}
+.choice strong{display:block;font-size:1.12rem;margin-bottom:8px}
+.choice span:last-child{display:block;color:var(--muted);font-size:.94rem}
+.meta{display:flex;align-items:center;gap:10px;color:var(--muted);font-size:.86rem;margin-bottom:18px}
+.dot{width:7px;height:7px;background:var(--gold);border-radius:50%}
+.progress{height:5px;background:#e9dfce;border-radius:9px;overflow:hidden;margin:0 0 26px}
+.progress span{display:block;height:100%;width:0;background:var(--gold);transition:width .3s}
+.actions{display:flex;justify-content:space-between;gap:12px;margin-top:26px;flex-wrap:wrap}
+.primary,.secondary{border:0;border-radius:999px;padding:12px 22px;cursor:pointer}
+.primary{background:var(--gold);color:#1f2936;font-weight:700}
+.secondary{background:transparent;border:1px solid #b9aa91;color:var(--ink)}
+.primary:hover{background:var(--gold2)}
+.secondary:hover{background:var(--soft)}
+.hidden{display:none!important}
+.ending-mark{font-size:2.2rem;color:var(--gold);margin-bottom:6px}
+.weber{background:#f7f0e2;border-radius:16px;padding:22px;margin-top:24px}
+.weber h3{margin:0 0 10px;font-size:1.1rem}
+.weber ul{padding-left:1.25rem;margin:10px 0}
+.weber li{margin:7px 0}
+.footer{text-align:center;color:var(--muted);font-size:.85rem;margin-top:30px}
+@media(max-width:680px){main{padding:22px 14px 48px}.topbar{padding:13px 17px}.topbar small{display:none}.choices{grid-template-columns:1fr}.hero{border-radius:18px}.panel{border-radius:17px}.choice{padding:19px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">志於己・人生岔路</div>
+  <small>共教國文｜我的人生篇</small>
+</header>
+<main>
+<section class="hero" id="cover">
+  <div class="eyebrow">A STORY OF CHOICE & VOCATION</div>
+  <h1>現實之上，<br>理想之下</h1>
+  <p class="subtitle">兩封錄取通知書，兩條不同的學術道路。當理想遇見現實，選擇不會替人生寫下答案，卻會讓我們開始承擔自己的方向。</p>
+  <p class="hero-quote">人生有多長，學習的路就有多長。<br>錄取通知書是旅程的起點，不是理想的終點。</p>
+  <div class="actions"><button class="primary" id="startBtn">開始旅程　→</button></div>
+</section>
+
+<section class="panel hidden" id="story" aria-live="polite">
+  <div class="progress" aria-label="故事進度"><span id="progressBar"></span></div>
+  <div class="meta"><span class="dot"></span><span id="stepLabel">第一岔路</span><span>・</span><span id="pathLabel">人生的抉擇</span></div>
+  <div id="storyContent"></div>
+  <div class="choices" id="choiceArea"></div>
+  <div class="actions"><button class="secondary" id="restartBtn">重新開始</button></div>
+</section>
+
+<section class="panel hidden" id="ending" aria-live="polite">
+  <div class="ending-mark">✦</div>
+  <div class="kicker">旅程暫歇・思考仍在繼續</div>
+  <h2 id="endingTitle"></h2>
+  <div id="endingText"></div>
+  <div class="weber">
+    <h3>回望文本｜韋伯〈以學術為志業〉</h3>
+    <p>這段旅程也讓我們重新思考韋伯提出的問題：學術不只是取得學位或選擇一份職業，而是一種需要面對現實條件、專業訓練與長期投入的志業。</p>
+    <ul>
+      <li><strong>外在條件：</strong>學術生涯受到制度、機會、資源與經濟條件影響。選擇學校與科系，因此不只是理想的表態，也必須衡量現實。</li>
+      <li><strong>熱情與專業工作：</strong>熱情使人願意投入，但不能取代嚴謹、持續的工作。志業需要熱情，也需要日復一日的專業耕耘。</li>
+      <li><strong>知識持續進步：</strong>科學成果可能被後來的研究超越。研究者的工作不是抵達永遠不變的終點，而是參與知識不斷推進的過程。</li>
+      <li><strong>科學與價值：</strong>科學能協助我們理解事實、條件與可能後果，卻不能替每個人決定人生最終應追求的價值。選擇與承擔仍須由自己完成。</li>
+    </ul>
+    <p>因此，兩條學術道路沒有簡單的優劣答案。真正重要的，是在理解條件與代價之後，找到自己願意長期投入的方向。</p>
+  </div>
+  <p class="note"><strong>留給自己的問題：</strong>如果未來的道路與現在想像的不同，我是否仍願意保持好奇、持續學習，並為自己的選擇負責？</p>
+  <div class="actions">
+    <button class="secondary" id="againBtn">再走一次</button>
+    <button class="primary" id="toTopBtn">回到故事開端 ↑</button>
+  </div>
+</section>
+<p class="footer">《現實之上，理想之下》｜每個選擇都有獲得，也都有失去。</p>
+</main>
+<script>
+"use strict";
+const nodes = {
+  start: {
+    step:"第一岔路", path:"兩封錄取通知書", progress:25,
+    title:"兩條道路，同一個遠方",
+    paragraphs:[
+      "在人生即將翻開新篇章之際，我同時收到了兩所大學的錄取通知書。一所位於熟悉的土地，另一所則遠在海峽之外。",
+      "一邊是馬來西亞諾丁漢大學環境科學系。它具有國際學術聲譽，在環境相關領域擁有值得期待的研究資源。這條道路讓我能更直接地投入環境科學，探索氣候變遷、環境監測與自然災害等議題。",
+      "另一邊是臺灣師範大學地理學系。地理學提供理解自然環境與人地關係的另一種視角，也讓我有機會接觸氣候、地形、自然災害及地理資訊等跨領域知識。然而，這也意味著離開熟悉的土地，前往異地展開新的生活。",
+      "兩所大學，兩種學術道路，卻都指向同一個尚未抵達的理想。選擇其中一條，也意味著暫時放下另一種可能。"
+    ],
+    choices:[
+      {id:"nottingham",label:"A",title:"留在馬來西亞｜諾丁漢大學環境科學",desc:"走近自己嚮往的環境科學專業與研究資源；同時面對理科基礎、課業挑戰與經濟負擔。"},
+      {id:"ntnu",label:"B",title:"遠赴臺灣｜臺師大地理學系",desc:"在自然與人文交會處探索地理學；同時承擔離家生活、適應新環境與未來的不確定性。"}
+    ]
+  },
+  nottingham: {
+    step:"第一岔路・選擇 A 之後",path:"留在熟悉的土地，走進專業",progress:50,
+    title:"熟悉的土地，不熟悉的課題",
+    paragraphs:[
+      "我留在馬來西亞，走進諾丁漢大學環境科學系。熟悉的生活環境減少了部分適應上的陌生，環境科學的課程卻帶來新的考驗。",
+      "課堂裡的數理概念、實驗與專業術語提醒我：對一個領域有興趣，並不代表已經具備走進它所需要的全部能力。曾經不足的理科基礎，必須一點一滴補起來。",
+      "學校的學術資源與環境領域聲譽讓我看見更多可能，但學費、生活開銷與成績壓力也真實存在。我開始明白，選擇一個理想的學習環境，不會自動替我完成學習。"
+    ],
+    choices:[
+      {id:"deep_n",label:"A",title:"先把根扎深｜專注累積專業",desc:"把時間放在基礎課程、研究方法與專業訓練，接受慢慢成長的節奏。"},
+      {id:"explore_n",label:"B",title:"走出課堂｜主動拓展邊界",desc:"尋找研究、實習與跨領域機會，嘗試把環境科學連結到更廣的問題。"}
+    ]
+  },
+  ntnu: {
+    step:"第一岔路・選擇 B 之後",path:"遠赴異地，重新安放自己",progress:50,
+    title:"海峽之外，重新開始",
+    paragraphs:[
+      "我帶著行李來到臺灣，在臺師大地理學系展開新的生活。新的城市、新的學習方式與新的生活圈，讓每一天都像是在重新認識世界，也重新認識自己。",
+      "地理學的視野比我原先想像的更寬廣：氣候、地形、自然災害與地理資訊彼此連結，也讓我看見環境問題可以從不同尺度與角度理解。",
+      "然而，離開熟悉的土地並不只有新鮮感。生活開銷、獨立生活、課業要求與適應壓力交織在一起。我開始思考，如何在有限的時間與資源裡，為真正重視的學習留下位置。"
+    ],
+    choices:[
+      {id:"deep_t",label:"A",title:"先把根扎深｜專注累積專業",desc:"穩定修習地理學核心課程，建立自然地理、分析方法與研究能力的基礎。"},
+      {id:"explore_t",label:"B",title:"走出課堂｜主動拓展邊界",desc:"主動接觸跨領域課程、研究活動與實務經驗，探索地理學與環境科學的交會。"}
+    ]
+  },
+  deep_n: {
+    ending:"deep",title:"在專業中，慢慢扎根",
+    text:"我選擇先把根扎深。在諾丁漢大學的環境科學道路上，我把心力放在基礎知識、研究方法與專業訓練，逐步接近氣候變遷、環境監測與自然災害風險分析等研究領域。<br><br>我獲得較清晰的專業方向，也累積了能夠帶往下一階段的知識與能力。但這份專注需要時間：我必須承受課業與經濟壓力，也暫時放下部分跨領域探索的機會。理想沒有立刻成真，卻不再只是遠方的想像。"
+  },
+  deep_t: {
+    ending:"deep",title:"在異地，建立自己的根",
+    text:"我選擇先把根扎深。在臺師大地理學系，我穩定累積自然地理、氣候、地形、地理資訊與研究方法的知識，逐漸找到自己想深入的環境議題。<br><br>我獲得獨立生活的經驗，也建立了理解環境與人地關係的學術視野。但遠離熟悉的生活圈，意味著持續面對生活成本、適應與孤獨；專注於既定課程，也讓我必須取捨其他探索。這條路未必輕鬆，卻讓我學會在陌生之地持續耕耘。"
+  },
+  explore_n: {
+    ending:"explore",title:"讓問題帶我走得更遠",
+    text:"我沒有把自己限制在課堂與單一專業之內。我開始尋找研究、實習與跨領域學習的機會，嘗試把環境科學與地理資訊、氣候研究及自然災害分析連結起來。<br><br>我獲得更寬廣的視野，也更有機會找到自己真正想投入的問題。然而，探索需要額外的時間與心力，方向有時並不清楚，成果也未必立即出現。我必須在專業深度與探索廣度之間不斷調整。"
+  },
+  explore_t: {
+    ending:"explore",title:"在交會之處，尋找新方向",
+    text:"我主動跨出原本熟悉的學習範圍，尋找地理學與環境科學的交會點。我嘗試接觸不同研究方法，探索氣候、環境監測、遙測與自然災害風險分析之間的連結。<br><br>我獲得更多元的學術經驗，也有機會重新定義自己的專業方向。但跨領域探索需要投入更多時間，生活與學習的壓力並未消失；接觸的領域越多，也越需要判斷哪些問題值得長期深耕。"
+  }
+};
+
+const cover=document.getElementById("cover"),story=document.getElementById("story"),ending=document.getElementById("ending");
+const content=document.getElementById("storyContent"),choiceArea=document.getElementById("choiceArea");
+const progressBar=document.getElementById("progressBar");
+let current="start",firstChoice=null,secondChoice=null;
+function showCover(){cover.classList.remove("hidden");story.classList.add("hidden");ending.classList.add("hidden");window.scrollTo({top:0,behavior:motionBehavior()});}
+function motionBehavior(){return window.matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth";}
+function renderEnding(id){
+  const n=nodes[id];story.classList.add("hidden");ending.classList.remove("hidden");
+  document.getElementById("endingTitle").textContent=n.title;
+  document.getElementById("endingText").innerHTML="<p class='lead'>"+n.text+"</p>";
+  window.scrollTo({top:ending.offsetTop-12,behavior:motionBehavior()});
+}
+document.getElementById("startBtn").addEventListener("click",()=>renderNode("start"));
+document.getElementById("restartBtn").addEventListener("click",showCover);
+document.getElementById("againBtn").addEventListener("click",showCover);
+document.getElementById("toTopBtn").addEventListener("click",showCover);
+
+// Render each branch and route its second choice to a context-specific ending.
+function renderNode(id){
+  current=id;const n=nodes[id];cover.classList.add("hidden");ending.classList.add("hidden");story.classList.remove("hidden");
+  document.getElementById("stepLabel").textContent=n.step;
+  document.getElementById("pathLabel").textContent=n.path;
+  progressBar.style.width=n.progress+"%";
+  content.innerHTML="<h2>"+n.title+"</h2>"+n.paragraphs.map((p,i)=>"<p class='"+(i===0?"lead":"")+"'>"+p+"</p>").join("");
+  choiceArea.innerHTML="";
+  n.choices.forEach(c=>{
+    const b=document.createElement("button");
+    b.className="choice";
+    b.type="button";
+    b.dataset.next=c.id;
+    b.innerHTML="<span class='choice-label'>"+c.label+"　／　選擇</span><strong>"+c.title+"</strong><span>"+c.desc+"</span>";
+    choiceArea.appendChild(b);
+  });
+  window.scrollTo({top:story.offsetTop-12,behavior:motionBehavior()});
+}
+// Use event delegation: every choice button, including newly rendered ones, is handled here.
+choiceArea.addEventListener("click", (event)=>{
+  const button=event.target.closest("button.choice");
+  if(!button || !choiceArea.contains(button)) return;
+  const nextId=button.dataset.next;
+  if(!nextId || !nodes[nextId]) return;
+
+  if(current==="start"){
+    firstChoice=nextId;
+    renderNode(nextId);
+  }else{
+    secondChoice=nextId;
+    renderEnding(nextId);
+  }
+});
+
+// Replace the two second-stage nodes' choices with explicit ending destinations.
+nodes.nottingham.choices=[
+ {id:"deep_n",label:"A",title:"先把根扎深｜專注累積專業",desc:"把時間放在基礎課程、研究方法與專業訓練，接受慢慢成長的節奏。"},
+ {id:"explore_n",label:"B",title:"走出課堂｜主動拓展邊界",desc:"尋找研究、實習與跨領域機會，嘗試把環境科學連結到更廣的問題。"}
+];
+nodes.ntnu.choices=[
+ {id:"deep_t",label:"A",title:"先把根扎深｜專注累積專業",desc:"穩定修習地理學核心課程，建立自然地理、分析方法與研究能力的基礎。"},
+ {id:"explore_t",label:"B",title:"走出課堂｜主動拓展邊界",desc:"主動接觸跨領域課程、研究活動與實務經驗，探索地理學與環境科學的交會。"}
+];
+</script>
+</body>
+</html>
